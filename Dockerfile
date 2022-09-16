@@ -12,9 +12,9 @@ RUN make
 RUN make install
 
 WORKDIR /
-# build asterisk 18.13.0
+# build asterisk
 ADD asterisk-18-current.tar.gz ./
-WORKDIR asterisk-18.13.0
+WORKDIR asterisk-18.14.0
 RUN ./configure --with-jansson-bundled --with-srtp=/usr/lib64 --libdir=/usr/lib64
 
 ADD menuselect.makeopts ./
